@@ -1,0 +1,200 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+*, *:focus, *:active, *:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button:focus, button:active, .btn-opcao:focus, .btn-sufixo:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Esconde todas as etapas por padrão para não encavalar */
+.etapa-container {
+  display: none;
+}
+
+/* Exibe APENAS a tela do nome ao carregar */
+#etapa-nome {
+  display: block;
+}
+
+/* Estilo do campo de digitar o nome */
+.input-nome {
+  padding: 12px;
+  font-size: 1.1rem;
+  width: 80%;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f8f9fa;
+  outline: none !important;
+  box-sizing: border-box;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.imagem-container img {
+  max-width: 200px;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.info-dica {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.opcoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-opcao {
+  background-color: #f8f9fa;
+  border: 2px solid #ced4da;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.verbo-destaque {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.leitura-destaque {
+  font-size: 1.4rem;
+  color: #6c757d;
+}
+
+.instrucao-flexao {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tempo-destaque {
+  color: #d9534f;
+  font-size: 1.3rem;
+}
+
+.construcao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.bloco-raiz {
+  background-color: #2c3e50;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.caixa-resposta {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #d9534f;
+  background-color: #f8f9fa;
+  user-select: none;
+}
+
+.sufixos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.btn-sufixo {
+  background-color: #f8f9fa;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-sufixo.ativo {
+  background-color: #2c3e50;
+  color: white;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-verificar { background-color: #28a745; color: white; }
+.btn-proximo { background-color: #0056b3; color: white; margin-top: 10px; }
+.btn-excel { background-color: #1d6f42; color: white; margin-top: 10px; }
+
+.mensagem { margin-top: 15px; font-weight: bold; font-size: 1.2rem; }
+.correto { color: #28a745; }
+.incorreto { color: #dc3545; }
+
+.explicacao {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.tela-fim h3 { font-size: 1.8rem; color: #2c3e50; margin-bottom: 15px; }
+.tela-fim p { font-size: 1.2rem; margin: 10px 0; color: #495057; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prática de Flexão Verbal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Prática de Flexão Verbal</h2>
+
+    <!-- TELA INICIAL: Digitar o Nome (Única visível ao carregar a página) -->
+    <div id="etapa-nome" class="etapa-container">
+      <p class="info-dica">Digite o seu nome para começar:</p>
+      <input type="text" id="input-nome" placeholder="Seu nome completo" class="input-nome" required>
+      <br><br>
+      <button onclick="iniciarPraticaComNome()" class="btn-proximo">Iniciar Prática</button>
+    </div>
+
+    <!-- PRIMEIRA FASE: Escolher o Verbo (Oculta inicialmente) -->
+    <div id="etapa1" class="etapa-container" style="display: none;">
+      <div class="imagem-container">
+        <img id="img-verbo" src="" alt="Imagem do verbo">
+      </div>
+
+      <div class="info-dica">
+        <p>Qual é o verbo para: <strong id="traducao-etapa1">---</strong>?</p>
+      </div>
+
+      <div class="opcoes-grid" id="opcoes-etapa1"></div>
+    </div>
+
+    <!-- SEGUNDA FASE: Selecionar o Sufixo (Oculta inicialmente) -->
+    <div id="etapa2" class="etapa-container" style="display: none;">
+      <div class="verbo-destaque">
+        <span id="kanji-etapa2">---</span>
+        <span id="leitura-etapa2" class="leitura-destaque">---</span>
+      </div>
+
+      <p class="instrucao-flexao">Flexione para: <strong id="tempo-alvo" class="tempo-destaque">---</strong></p>
+
+      <div class="construcao-container">
+        <div class="bloco-raiz" id="bloco-raiz">---</div>
+        <div class="caixa-resposta" id="caixa-resposta"></div>
+      </div>
+
+      <div class="sufixos-container" id="sufixos-container"></div>
+
+      <button onclick="verificarEtapa2()" class="btn-verificar" id="btn-conferir">Conferir</button>
+    </div>
+
+    <!-- TELA FINAL: Resultado (Oculta inicialmente) -->
+    <div id="tela-fim" class="etapa-container tela-fim" style="display: none;">
+      <h3>Atividade Concluída</h3>
+      <p>Acertos: <strong id="res-acertos" style="color: #28a745;">0</strong> (<span id="porc-acertos">0%</span>)</p>
+      <p>Erros: <strong id="res-erros" style="color: #dc3545;">0</strong> (<span id="porc-erros">0%</span>)</p>
+      
+      <button onclick="reiniciarPratica()" class="btn-proximo">Reiniciar Prática</button>
+    </div>
+
+    <!-- Botão de Próximo e Mensagens -->
+    <div class="acoes">
+      <button onclick="proximaQuestao()" class="btn-proximo" id="btn-proximo" style="display:none;">Próximo Verbo</button>
+    </div>
+
+    <div id="mensagem" class="mensagem"></div>
+    <div id="explicacao" class="explicacao"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
